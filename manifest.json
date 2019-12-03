@@ -1,0 +1,23 @@
+{
+  "name": "F12 Ignore",
+  "short_name": "f12ignore",
+  "description": "Disable the F12 keyboard shortcut. Nothing more.",
+  "version": "1.4.2",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "permissions": [
+    "<all_urls>"
+  ]
+}
